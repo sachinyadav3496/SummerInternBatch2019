@@ -1,0 +1,5 @@
+name,math,science,english,chem
+rajat,70,80,90,89
+kushal,60,78,67,80
+yadvendra,67,89,87,79
+nidhi,67,87,87,60

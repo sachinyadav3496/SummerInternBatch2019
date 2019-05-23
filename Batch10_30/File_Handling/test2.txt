@@ -1,0 +1,5 @@
+name,math,science,english,chem,Avg
+rajat,70,80,90,89,82.25
+kushal,60,78,67,80,71.25
+yadvendra,67,89,87,79,80.5
+nidhi,67,87,87,60,75.25

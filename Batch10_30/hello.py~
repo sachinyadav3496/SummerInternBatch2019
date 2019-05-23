@@ -6,6 +6,4 @@ def hello(name):
 
 
 
-# print(sys.argv) command line
-
-hello(sys.argv[1])
+print(sys.argv)
