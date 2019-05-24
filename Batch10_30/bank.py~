@@ -1,0 +1,5 @@
+
+import time
+print("Welcome to farzi bank".center(100,"-"))
+
+print("Time ",time.ctime())
