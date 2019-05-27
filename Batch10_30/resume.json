@@ -1,0 +1,22 @@
+{
+     "name": "Sachin Yadav",
+     "email": "sachin@grras.com",
+     "contact": 9782131159,
+     "skills": [
+          "java",
+          "c",
+          "c++",
+          "python",
+          "database"
+     ],
+     "graduation": {
+          "school": 88,
+          "high-school": 85,
+          "ug": 71
+     },
+     "blood_group": "B+ive",
+     "git": "https://github.com/sachinyadav3496",
+     "project": {
+          "bank_app": "Basic application build in core Python using file handling"
+     }
+}

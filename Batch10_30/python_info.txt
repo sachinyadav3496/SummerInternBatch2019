@@ -1,0 +1,24 @@
+{
+     "name": "python",
+     "version": 3.7,
+     "modules": {
+          "ds": [
+               "matplot",
+               "numpy",
+               "scipy"
+          ],
+          "ml": [
+               "sklearn",
+               "teserflow"
+          ],
+          "web": [
+               "django",
+               "flask"
+          ]
+     },
+     "version_info": {
+          "python1": 1994,
+          "python2": 2000,
+          "python3": 2008
+     }
+}
