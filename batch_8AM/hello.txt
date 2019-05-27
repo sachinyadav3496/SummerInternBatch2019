@@ -1,1 +1,8 @@
 hello world
+    this is easy,
+in file hadling we just read or write data
+in file.
+
+
+
+			Hello World

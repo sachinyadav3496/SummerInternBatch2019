@@ -1,0 +1,4 @@
+DATE:LOG_TYPE:MESSEAGE
+Mon May 27 09:11:11 2019:WARNING:Unknown User Attempted To Log in in SERVER with name alskdfj
+Mon May 27 09:11:11 2019:DENY:Invalid Password tried by sachin
+Mon May 27 09:11:11 2019:INFO:User Sucessfully Logged in having user name sachin

@@ -1,0 +1,17 @@
+{
+          "1001": {
+                    "name": "sachin",
+                    "bal": 50000,
+                    "password": "redhat"
+          },
+          "1002": {
+                    "name": "rajat",
+                    "bal": 4500000,
+                    "password": "redhat"
+          },
+          "1003": {
+                    "name": "nishi",
+                    "bal": 343,
+                    "password": "hi"
+          }
+}
