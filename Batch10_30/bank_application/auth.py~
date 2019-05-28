@@ -1,0 +1,43 @@
+"""
+    we auth functions like login and signup
+    """
+import os
+import time
+import shelve
+import getpass
+from trans import sub_menu
+
+def login():
+    acc = input("\n\n\t\tEnter account number : ")
+    db = shelve.open("database/bank.db")
+    if acc in db.keys() : 
+        password = getpass.getpass("\n\t\tPassword : ")
+        if password == db[acc]['password'] : 
+            sub_menu(acc)
+        else : 
+            print("\n\n\t\tError!! Invalid Password....Try Agai")
+                
+    else : 
+        print("\n\n\t\tError!!! Invalid Account Number")
+        print("\n\n\t\tIf you are a new user please SignUp First")
+    
+    print("\n\n\t\t.......redirecting to main menu........")
+    time.sleep(4)
+
+def signup():
+    os.system("cls")
+    print("\n\n\t\tWelcome to Signup Service\n\n")
+    print(f"Time : {time.ctime()}")
+    name = input("\n\n\tEnter your name : ")
+    bal = eval(input("\n\tEnter your initial amount : "))
+    password = getpass.getpass("\n\tPassword :")
+    db = shelve.open('database/bank.db',writeback=True)
+    acc_no = db.get('last_acc') + 1
+    db['last_acc'] = acc_no
+    acc_no = str(acc_no)
+    db[acc_no] = { 'name':name,'bal':bal,'password':password } 
+    db.close()
+    print("\n\n\tAccount Create Sucessfully Write down your account number ")
+    print(f"\n\n\t your account num is {acc_no} and used to login \n\n")
+    input("\n\n...........Press any key to continue....")
+    

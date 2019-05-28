@@ -1,0 +1,15 @@
+
+Tue May 28 12:29:53 2019:InFO:Application Started
+Tue May 28 12:29:56 2019:INFO:User Tried To Login
+Tue May 28 12:29:58 2019:DENY:unauthoriged account accessed
+Tue May 28 12:30:02 2019:InFO:Application Started
+Tue May 28 12:30:05 2019:INFO:User Tried To Login
+Tue May 28 12:30:07 2019:ERROR:Login unsucessfull for acc no 1001 because of Password Verification
+Tue May 28 12:30:11 2019:InFO:Application Started
+Tue May 28 12:30:12 2019:INFO:User Tried To Login
+Tue May 28 12:30:16 2019:LOGIN:Login sucessfull for acc no 1001
+Tue May 28 12:30:20 2019:InFO:Application Started
+Tue May 28 12:30:22 2019:INFO:User Tried To Signup
+Tue May 28 12:30:32 2019:SIGNUP:Signup sucessfull for acc no 1005 because of Password Verification
+Tue May 28 12:30:43 2019:InFO:Application Started
+Tue May 28 12:30:44 2019:INFO:Application Closed
