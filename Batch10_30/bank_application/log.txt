@@ -27,3 +27,21 @@ Sat Jun  1 07:03:10 2019:INFO:User Tried To Login
 Sat Jun  1 07:03:15 2019:LOGIN:Login sucessfull for acc no 1006
 Sat Jun  1 07:03:19 2019:InFO:Application Started
 Sat Jun  1 07:03:23 2019:INFO:Application Closed
+Tue Jun  4 17:22:53 2019:InFO:Application Started
+Tue Jun  4 17:23:09 2019:INFO:Application Closed
+Tue Jun  4 17:23:14 2019:InFO:Application Started
+Tue Jun  4 17:23:16 2019:INFO:User Tried To Login
+Tue Jun  4 17:23:19 2019:DENY:unauthoriged account accessed
+Tue Jun  4 17:23:23 2019:InFO:Application Started
+Tue Jun  4 17:23:25 2019:INFO:User Tried To Signup
+Tue Jun  4 17:23:32 2019:SIGNUP:Signup sucessfull for acc no 1007 because of Password Verification
+Tue Jun  4 17:23:39 2019:InFO:Application Started
+Tue Jun  4 17:23:43 2019:INFO:User Tried To Login
+Tue Jun  4 17:23:46 2019:ERROR:Login unsucessfull for acc no 1007 because of Password Verification
+Tue Jun  4 17:23:50 2019:InFO:Application Started
+Tue Jun  4 17:23:52 2019:INFO:User Tried To Signup
+Tue Jun  4 17:24:02 2019:InFO:Application Started
+Tue Jun  4 17:24:03 2019:INFO:User Tried To Login
+Tue Jun  4 17:24:07 2019:LOGIN:Login sucessfull for acc no 1007
+Tue Jun  4 17:24:11 2019:InFO:Application Started
+Tue Jun  4 17:24:23 2019:INFO:Application Closed
