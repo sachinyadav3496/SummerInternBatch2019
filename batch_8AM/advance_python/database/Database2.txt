@@ -1,0 +1,57 @@
+----> now lets enter data into student,address, and fees table 
+
+#INSERT INTO student(sid,name,ph_no,email) VALUES(1001,'sachin',9782131159,'sachin@grras.com');
+
+#INSERT INTO address(addr_id,sid,house_no,street,area,land_marks,city,state,country,pincode) values(1,1001,'c-54','kana vihar','ayodhya nagar','behid ram mandir','jaipur','rajasthan','india',302021);
+
+#INSERT INTO fees(fid,sid,due,fees,discount) values(1,1001,3500,15000,2000);
+
+----> we can insert multiple values also 
+
+#INSERT INTO student(name,ph_no,email) VALUES ('kushal',1234323456,'kushal.samota@grras.com'), ('rajat',8923342334,'rajat.goyal@gmail.com'), ('ravi',9782123432,'ravi.sarswat@gmail.com'), ('gaurav',992334561,'gaurav.saluja@gmai.com'), ('nidhi',9912345678,'nidhi.sharma@yahoo.com') ;
+
+----> FOR COUNTER RESET --> ALTER TABLE student AUTO_INCREMENT=8
+----> now select data from student table 
+
+#SELECT * FROM student;
+
+----> in same manner put entries in other tables also 
+
+#INSERT INTO address (sid,house_no,street,area,land_marks,city,state,country,pincode) values (1002,'112/23','','near main market','','udaipur','rajasthan','india',313001), (1003,'d-112','near om garden','jayanti road','','jaipur','rajasthan','india',302026), (1004,'k-12','gyan vihar','near gt road','','jaipur','rajasthan','india',302024), (1005,'k-12','','behid kiran sweets','himmat nagar','jaipur','rajasthan','india',302026), (1006,'c-56','mansorvar plaza','','','kaipur','rajasthan','india',313001);
+
+----> now select data from address table
+
+#SELECT * FROM address;
+
+----> now data in fees table 
+
+#INSERT INTO fees(sid,due,fees,discount) values (1002,5000,20000,0), (1003,4300,15000,2000), (1004,2700,18000,1000), (1005,3500,16000,3000), (1006,7500,25000,3500) ;
+
+#SELECT  * FROM fees;
+
+
+----> let's do queries now 
+
+
+#SELECT student.name,student.ph_no,fees.due FROM fees INNER JOIN student ON student.sid=fees.sid WHERE fees.due >= 5000;
+
+
+----> Join Operation Link https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
+
+----> let's create views 
+
+
+#CREATE VIEW fees_status as select student.name,student.ph_no,fees.due,fees.fees from student,fees where fees.sid=student.sid;
+
+----> see data from your view
+
+#SELECT * FROM fees_status;
+
+----> deleting view 
+
+#DROP VIEW fees_status
+
+----> Detailed Query Link https://bytescout.com/blog/20-important-sql-queries.html
+
+
+ 

@@ -1,0 +1,128 @@
+----> log into database ( in case of error make sure your database is running at localhost on port number 3306)
+
+#mysql -u root -p 
+
+----> full command  mysql --host hostname --port 3306 --user username --database dbname -p 
+#show databases
+---> for showing the databases
+#select user,host from mysql,user;
+---> to check user and host name
+
+---> for creating a database 
+
+#CREATE DATABASE student CHARACTER SET utf8;
+
+----> select created database student
+
+#USE student; OR we can login through #mysql -u root -p student(database name)
+
+----> create a table called student
+
+#CREATE TABLE student(sid INT(5) NOT NULL auto_increment, name VARCHAR(50) NOT NULL, ph_no VARCHAR(13) DEFAULT 'NA',email VARCHAR(50) NOT NULL, CONSTRAINT `pk` PRIMARY KEY  (sid) );
+
+----> create a table called address connected to student
+
+#CREATE TABLE address(addr_id INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,sid INT(5) NOT NULL, house_no VARCHAR(10),street VARCHAR(100), area VARCHAR(200), land_marks VARCHAR(200), city VARCHAR(50) NOT NULL, state VARCHAR(50) NOT NULL, country VARCHAR(50) NOT NULL,pincode INT(6) NOT NULL, CONSTRAINT `fk_student` FOREIGN KEY (sid) REFERENCES student(sid) ON DELETE CASCADE ON UPDATE NO ACTION );
+
+----> create a table called fees 
+
+#CREATE TABLE fees(fid INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT, sid INT(3) NOT NULL, due DOUBLE, fees DOUBLE, discount DOUBLE,CONSTRAINT `student_fk` FOREIGN KEY (sid) REFERENCES student(sid) );
+
+----> create a table called course
+
+# CREATE TABLE course(cid INT(5) NOT NULL PRIMARY KEY,sid INT(5) NOT NULL,name VARCHAR(100), CONSTRAINT `fk_course` FOREIGN KEY (sid) REFERENCES student(sid) );
+
+
+----> show tables in student databases
+
+#SHOW TABLES;
+
+----> let's see schema of student table
+
+#DESCRIBE student;
+
+----> let's see schema of address table
+
+#DESCRIBE address;
+
+----> let's see schema of fees table 
+
+#DESCRIBE fees;
+
+#DESCRIBE course;
+
+-----> now create a admin user for student database 
+
+----> to delete users from database 
+
+#DELETE FROM mysql.user WHERE user='student';
+----> DELETE FROM database.tablename WHERE user='username'
+
+#CREATE USER 'student'@'localhost' IDENTIFIED BY 'student';
+
+----> for remote user give usernameas --> 'student'@'domain.com' or 'student'@'192.168.5.10' or 'student'@'%'
+
+
+----> now grant permission to newley created user on all tables of student database
+
+#GRANT ALL PRIVILEGES ON student.* TO 'student'@'localhost';
+
+----> if want to remove privileges just REVOKE instead of grant
+----> create a user who can only fire select command to student database 
+
+#CREATE USER 'st'@'localhost' IDENTIFIED BY 'student';
+
+----> grant only select query on student database tables 
+
+#GRANT SELECT ON student.* TO 'st'@'localhost'; 
+
+----> use SELECT,UPDATE,INSERT,... to provide more privileges to an user or for specific table use student.table name as student.address or so 
+
+----> to verify privileges just logout by command exit and login with user privileges
+
+#EXIT;
+
+#mysql -u student -p student
+
+----> lets check select privileges 
+
+#SELECT * FROM student;
+
+----> it will work now create a table 
+
+#CREATE TABLE new_table (id TEXT,data BLOB);
+
+----> BLOB is data type of mariadb and you will see table will be created
+
+----> Now let's delete the table 
+
+#DROP TABLE new_table;
+
+
+----> logout again 
+
+#EXIT 
+
+
+----> login with different user 
+
+#mysql -u st -p student
+
+----> show table command 
+
+#SHOW TABLES;
+
+----> fire select query on student table
+
+#SELECT * FROM student;
+
+----> now try to create table 
+
+#CREATE TABLE new_table(id int(5));
+
+----> you will get error message as st user does not have permission of maniplutation 
+
+#EXIT
+
+
+#mysql -u student -p student 
