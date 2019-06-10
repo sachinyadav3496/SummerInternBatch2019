@@ -1,0 +1,17 @@
+.main{
+    background-color: brown;
+    padding-left: 350px;
+    padding-top: 200px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+td{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:coral;
+font-size: 30px;
+}
+.sub{
+height: 40px;
+width : 70px;
+color: aqua;
+}
