@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is header</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='abc.css') }}">
+    </head>
+    <body>
+        <div class='main'>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="/">LOGIN</a></li>
+                <li><a href="/signup">SIGNUP</a></li>
+                <li><a href="/hello/">HELLO</a></li>
+            </ul>
+        </div>
+        <div class="login">
+            {% if error %}
+            <h1 style="color:red">{{ error }}</h1>
+            {% endif %}
+            <form method="POST" action="/login/">
+                <label>Enter your email</label><br>
+                <input type='email' name='email'><br><br>
+                <label>Enter your password</label><br>
+                <input type="password" name='pass'><br><br>
+                <input type="submit" value="LOGIN">
+            </form>
+        </div>
+    </body>
+</html>
