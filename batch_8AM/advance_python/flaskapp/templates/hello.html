@@ -7,5 +7,11 @@
         <h1 style="color:brown">Welcome user {{ user }}</h1>
         {% endif %}
         <h1 style="color:coral">Welcome to my first project</h1>
+        {% if data %}
+        {% for key,value in data.items() %}
+        <h3 style="color:red">{{ key }}={{ value }}</h3>
+        {% endfor %}
+        {% endif %}
+        
     </body>
 </html>
