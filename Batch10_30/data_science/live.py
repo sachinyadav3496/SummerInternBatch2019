@@ -11,7 +11,7 @@ ax.plot(x,y,'r^:')
 import time
 def change(interval):
     global x,y
-    x.append(x[-1]+1)
+    y.pop(0)
     y.append(np.random.randint(10,25))
     time.sleep(interval)
     ax.clear()
