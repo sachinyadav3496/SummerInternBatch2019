@@ -1,5 +1,8 @@
-body{
-    background-color: coral;
+.abc{
+    background-image: url('images/one.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
 }
 
 .main li{
@@ -7,16 +10,19 @@ body{
 }
 .main {
     float : right;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 a {
     font-size: 30px;
     font-style: italic;
     color: black;
 }
-li {
-    padding-left: 20px;
+.login {
+	padding-top : 170px;
 }
-form {
-    margin-top :170px;
+label {
+    text-decoration-color: indianred;
+}
+input {
+    padding: 5px;
 }

@@ -12,12 +12,20 @@
                 <li><a href="/">LOGIN</a></li>
                 <li><a href="/signup">SIGNUP</a></li>
                 <li><a href="/hello/">HELLO</a></li>
-                <li><a href="/logout/">LOGOUT</a></li>
             </ul>
         </div>
-        {% if error %}
-        <h1 style='color:red'>{{ error }}</h1>
-        {% endif %}
+        <div class="login">
+            {% if error %}
+            <h1 style="color:red">{{ error }}</h1>
+            {% endif %}
+            <form method="POST" action="/login/">
+                <label>Enter your email</label><br>
+                <input type='email' name='email'><br><br>
+                <label>Enter your password</label><br>
+                <input type="password" name='pass'><br><br>
+                <input type="submit" value="LOGIN">
+            </form>
+        </div>
         </div>
     </body>
-    </html>
+</html>
