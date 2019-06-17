@@ -1,0 +1,13 @@
+body{
+    background-color: coral;
+}
+td{
+    font-size: 40px;
+    color: brown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sub{
+    color: cornflowerblue;
+    height: 50px;
+    width: 80px;
+}

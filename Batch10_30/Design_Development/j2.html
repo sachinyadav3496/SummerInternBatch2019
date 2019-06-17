@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <style>
+        p{
+            color: blueviolet;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <body>
+        <p id="mytag"></p>
+        <button value="red" onclick="red()">RED</button>
+        <button value="green" onclick="green()">GREEN</button>
+        <button value="yellow" onclick="yellow()">YELLOW</button>
+        <script>
+            var s = "simran"
+            document.getElementById("mytag").innerHTML = s
+            function red(){
+                document.body.style.background = "red";
+            }
+            function green(){
+                document.body.style.background = "green";
+            }
+            function yellow(){
+                document.body.style.background = "yellow";
+            }
+        </script>
+    </body>
+</html>
