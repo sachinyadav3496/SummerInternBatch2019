@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>My first page</title>
+        <style>
+            body{
+                background: linear-gradient(to right,#193B52,#C70039)
+            }
+            p{
+                color:aquamarine;
+                font-size: 30px;
+                font-style: italic;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1{
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        {% include "app1/header.html" %}
+        {% block head %}
+        {% endblock %}
+        <h1>This is my first project on django</h1>
+        <p>I love python....</p>
+    </body>
+</html>

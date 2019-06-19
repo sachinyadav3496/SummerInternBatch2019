@@ -1,0 +1,9 @@
+.main{
+    float : right;
+}
+.main li{
+    display: inline-block;
+}
+a{
+    color:black;
+}
