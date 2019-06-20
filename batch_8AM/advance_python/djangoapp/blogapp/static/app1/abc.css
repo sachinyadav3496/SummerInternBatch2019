@@ -1,3 +1,6 @@
+body{
+    background: linear-gradient(to right,#193B52,#C70039)
+}
 .main{
     float : right;
 }

@@ -2,6 +2,9 @@
     <head>
         <title>My first page</title>
         <style>
+            body{
+                background: linear-gradient(to right,#193B52,#C70039)
+            }
             p{
                 color:aquamarine;
                 font-size: 30px;
@@ -17,7 +20,13 @@
         {% include "app1/header.html" %}
         {% block head %}
         {% endblock %}
-        <h1>This is my first project on django</h1>
-        <p>I love python....</p>
+        {% if error %}
+        <h1 style="color: red">{{ error }}</h1>
+        {% endif %}
+        {% if data %}
+        {% for key,value in data.items %}
+        <h2 style="color: brown">{{ key }}={{ value }}</h2>
+        {% endfor %}
+        {% endif %}
     </body>
 </html>
