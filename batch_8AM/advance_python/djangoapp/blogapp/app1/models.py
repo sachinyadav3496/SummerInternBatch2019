@@ -5,7 +5,7 @@ class AddUser(models.Model):
     Email = models.EmailField(unique=True)
     Username = models.CharField(max_length=50,default=None)
     Password = models.CharField(max_length=40)
-    Profile = models.ImageField()
+    Profile = models.ImageField(upload_to="static/images")
     Active = models.BooleanField(default=True)
 
     def __str__(self):

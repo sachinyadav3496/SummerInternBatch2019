@@ -1,0 +1,24 @@
+{% block head %}
+<html>
+    <head>
+        <title>This is header</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'app1/abc.css' %}">
+    </head>
+    <body>
+        <div class="abc">
+        <div class='main'>
+            <ul>
+                <li><a href="/app1/">HOME</a></li>
+                <li><a href="#">PROFILE</a></li>
+                <li><a href="/blog/addblog/">ADDBLOG</a></li>
+                <li><a href="#">SHOWBLOG</a></li>
+                <li><a href="#">MYBLOG</a></li>
+                <li><a href="/app1/logout/">LOGOUT</a></li>
+            </ul>
+        </div>
+        </div>
+    </body>
+    </html>
+
+{% endblock %}

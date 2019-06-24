@@ -23,10 +23,10 @@
         {% if error %}
         <h1 style="color: red">{{ error }}</h1>
         {% endif %}
-        <form method="POST" action="/app1/signup1/" enctype="multipart/form-data">
+        <form method="POST" action="/blog/postblog/">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="SIGNUP">
+            <input type="submit" value="LOGIN">
         </form>
     </body>
 </html>
