@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from .forms import Login,Signup
 from django.views import View
 from .models import AddUser
+from django.core.mail import send_mail
+from django.conf import settings
+import random
 # Create your views here.
 def index(request):
     return render(request,"app1/index.html")
@@ -95,3 +98,12 @@ def logout(request):
     del request.session['email']
     del request.session['password']
     return render(request,"app1/index.html")
+
+def forgot(request):
+    to_email = "simrangrover5@gmail.com"
+    from_email = "simrangrover5@gmail.com"
+    subject = "Mail for otp"
+    otp = str(random.randint(0000,9999))
+    message = "Change password using this otp" + otp
+    send_mail(subject,message,from_email,(to_email,),auth_password=settings.EMAIL_HOST_PASSWORD)
+    return HttpResponse("SUCCESS")

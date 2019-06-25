@@ -4,6 +4,9 @@ from .forms import Blog
 from django.views import View
 from .models import AddBlog
 from app1.models import AddUser
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import AddBlogSerializer
 # Create your views here.
 def index(request):
     return HttpResponse("<h1 style='color:red'>This is blog app</h1>")
@@ -35,3 +38,22 @@ class Blogpost(View):
             form = Blog()
             return render(request,"blog/blog.html",{'form':form,'error':error})
 
+def showblog(request):
+    blogs = AddBlog.objects.all()
+    print(blogs)
+    data = []
+    for var in blogs:
+        dict = {
+            'title' : var.title,
+            'post' : var.post,
+            'author' : var.author.Username,
+        }
+        data.append(dict)
+    return render(request,"blog/blogfeed.html",{'data':data})
+    #return HttpResponse("SUCCESS")
+
+class Blogapi(APIView):
+    def get(self,request):
+        blog = AddBlog.objects.all()
+        serializer = AddBlogSerializer(blog,many=True)
+        return Response(serializer.data)

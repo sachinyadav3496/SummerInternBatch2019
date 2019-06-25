@@ -23,11 +23,10 @@
         {% if error %}
         <h1 style="color: red">{{ error }}</h1>
         {% endif %}
-        <form method="POST" action="/app1/login1/">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="LOGIN">
-        </form>
-        <a href="/app1/forgot/">FORGOT PASSWORD?</a>
+        {% for var in data %}
+        <h1>{{ var.title }}</h1>
+        <p>{{ var.post }}</p>
+        <h2>{{ var.author }}</h2>
+        {% endfor %}
     </body>
 </html>
