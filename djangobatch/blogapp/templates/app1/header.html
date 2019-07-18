@@ -1,0 +1,37 @@
+{% block head %}
+<html>
+    <head>
+        <style>
+            li{
+                display: inline-block;
+                padding: 10px;
+            }
+            div{
+                float:left;
+                width: 100%;
+                background-color: grey;
+                
+
+            }
+            body{
+                background: linear-gradient(#193B52  ,#FF5733)
+            }
+            a{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><a href="/app1/">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="/app1/login/">LOGIN</a></li>
+                <li><a href="/app1/signup/">SIGNUP</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
+{% endblock %}

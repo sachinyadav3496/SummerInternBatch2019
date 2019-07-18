@@ -1,0 +1,10 @@
+<html>
+    <body>
+        {% include "app1/header.html" %}
+        {% block head %}
+        {% endblock %}
+        {% for key,value in dict.items %}
+        <h1>{{ key }}={{ value }}</h1>
+        {% endfor %}
+    </body>
+</html>

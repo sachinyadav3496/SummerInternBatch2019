@@ -1,0 +1,20 @@
+<html>
+    <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app1/abc.css' %}">
+    </head>
+    <body>
+        {% include "app1/header.html" %}
+        {% block head %}
+        {% endblock %}
+        {% if error %}
+        <h1>{{ error }}</h1>
+        {% endif %}
+        <form method="POST" action="/app1/login1/">
+            {% csrf_token %}
+            {{ form.as_p }} 
+             <!--as_table or as_ul-->
+            <input type="submit" value="LOGIN">
+        </form>
+    </body>
+</html>
